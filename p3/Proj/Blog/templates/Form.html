@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            FORM
+        </title>
+    </head>
+    <body>
+        <h1>
+            bia bego mano cheghad mishansi?  
+        </h1>
+        <form action="{% url 'form' %}" method="POST"> 
+
+            <label for ="username">age rast migi esmamo bego!!!</label><br>
+            <input type="text" name="user_name">
+            <br>
+            <label for = "name"> familim chie?</label><br>
+            <input type = "text" name="lastname" ><br>
+            <br>
+            <label for = "age">chand salame? </label><br>
+            <input type = "number" name="age" ><br>
+            <br>
+            <label for = "email">address emailam chie? </label><br>
+            <input type="email" name="my_email"><br>
+            <br>
+            <label for = "password">ramzet chie? </label><br>
+            <input type="password" name="user_pass"><br>
+            <input type="submit" value="click">
+            <input type="reset" value="reset">
+        </form>
+        {% for item in person %}
+        <ul>
+            <li>
+                {{ item }}
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

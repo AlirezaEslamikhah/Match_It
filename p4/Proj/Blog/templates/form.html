@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <img src="https://static.neris-assets.com/images/homepage/community.svg" />
+        <title>
+            MATCH IT 
+        </title>
+    </head>
+    <body>
+        <h1>
+            FIND YOR IDEAL FRIEND    
+        </h1>
+        <form action="{% url 'form' %}" method="POST"> 
+
+            <label for ="name"><br><br>You can use nicknames to maintain your privacy<br> Your name will be shown to the others  <br><br> What is your name?</label><br>
+            <input type="text" name="user_name">
+            <br><br>
+            <label for = "type"> What is your mbti personality  type?</label><br>
+            <input type = "text" name="type" ><br>
+            <br>
+            <label for = "city">What is your city? </label><br>
+            <input type = "text" name="city" ><br>
+            <br>
+            <label for = "age">How old are you? </label><br>
+            <input type = "number" name="age" ><br><br>
+            <input type="submit" value="click">
+            <input type="reset" value="reset">
+        </form>
+        {% for item in person %}
+        <ul>
+            <li>
+                {{ item }}
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

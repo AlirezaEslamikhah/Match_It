@@ -1,0 +1,7 @@
+python -m venv env
+env/Scripts/activateen
+pip install django
+django-admin startproject tutorial .
+cd tutorial
+django-admin startapp quickstart
+cd ..

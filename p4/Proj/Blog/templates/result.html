@@ -1,0 +1,23 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>YOUR MATCH :) </title>
+    </head>
+    HERE IS YOUR IDEAL FRIEND <br>
+    <img src="https://static.neris-assets.com/images/team.svg?v=2"
+    <body>
+        {% for person in result %}<br>
+        YOUR FRIEND'S NAME IS <br>
+
+        {{person.username}}<br>
+        <br>
+        YOUR FRIEND'S PERSONALITY TYPE IS <br>
+        {{person.type}}<br><br>
+        WHERE YOUR FRIEND LIVES IS <br>
+        {{person.city}}<br>
+        YOUR FRIEND'S AGE IS <br> 
+        {{person.sen}}
+        {% endfor %}
+
+    </body>
+</html>
